@@ -1,0 +1,406 @@
+/**
+ * Name         : Martor v1.5.7
+ * Created by   : Agus Makmun (Summon Agus)
+ * Release date : 29-Oct-2020
+ * License      : GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
+ * Repository   : https://github.com/agusmakmun/django-markdown-editor
+**/
+
+.marked-emoji,
+div.editor-preview .marked-emoji {
+    max-width: 20px;
+}
+
+div.editor-preview {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+div.editor-preview img {
+    padding: 4px;
+}
+
+div.editor-preview>*:first-child {
+    margin-top: 0 !important;
+}
+
+div.editor-preview>*:last-child {
+    margin-bottom: 0px !important;
+}
+
+div.editor-preview a.absent {
+    color: #c00;
+}
+
+div.editor-preview a.anchor {
+    display: block;
+    padding-left: 30px;
+    margin-left: -30px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+div.editor-preview h1,
+div.editor-preview h2,
+div.editor-preview h3,
+div.editor-preview h4,
+div.editor-preview h5,
+div.editor-preview h6 {
+    margin: 20px 0 10px;
+    padding: 0;
+    font-weight: bold !important;
+    -webkit-font-smoothing: antialiased;
+    cursor: text;
+    position: relative;
+    background: none;
+}
+
+div.editor-preview h1:hover a.anchor,
+div.editor-preview h2:hover a.anchor,
+div.editor-preview h3:hover a.anchor,
+div.editor-preview h4:hover a.anchor,
+div.editor-preview h5:hover a.anchor,
+div.editor-preview h6:hover a.anchor {
+    text-decoration: none;
+    line-height: 1;
+    padding-left: 0;
+    margin-left: -22px;
+    top: 15%;
+}
+
+div.editor-preview h1 tt,
+div.editor-preview h1 code,
+div.editor-preview h2 tt,
+div.editor-preview h2 code,
+div.editor-preview h3 tt,
+div.editor-preview h3 code,
+div.editor-preview h4 tt,
+div.editor-preview h4 code,
+div.editor-preview h5 tt,
+div.editor-preview h5 code,
+div.editor-preview h6 tt,
+div.editor-preview h6 code {
+    font-size: inherit;
+}
+
+div.editor-preview h1 {
+    font-size: 28px !important;
+    color: #000 !important;
+}
+
+div.editor-preview h2 {
+    font-size: 24px !important;
+    color: #000 !important;
+}
+
+div.editor-preview h3 {
+    font-size: 18px !important;
+}
+
+div.editor-preview h4 {
+    font-size: 16px !important;
+}
+
+div.editor-preview h5 {
+    font-size: 14px !important;
+    text-transform: none !important;
+}
+
+div.editor-preview h6 {
+    color: #777;
+    font-size: 14px;
+}
+
+div.editor-preview p,
+div.editor-preview blockquote,
+div.editor-preview ul,
+div.editor-preview ol,
+div.editor-preview dl,
+div.editor-preview table,
+div.editor-preview pre {
+    margin: 15px 0;
+}
+
+div.editor-preview p {
+    font-size: 16px;
+}
+
+div.editor-preview hr {
+    border: 0;
+    border-top: 1px solid #e8e8e8;
+}
+
+div.editor-preview>h2:first-child,
+div.editor-preview>h1:first-child,
+div.editor-preview>h1:first-child+h2,
+div.editor-preview>h3:first-child,
+div.editor-preview>h4:first-child,
+div.editor-preview>h5:first-child,
+div.editor-preview>h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+div.editor-preview a:first-child h1,
+div.editor-preview a:first-child h2,
+div.editor-preview a:first-child h3,
+div.editor-preview a:first-child h4,
+div.editor-preview a:first-child h5,
+div.editor-preview a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+div.editor-preview h1+p,
+div.editor-preview h2+p,
+div.editor-preview h3+p,
+div.editor-preview h4+p,
+div.editor-preview h5+p,
+div.editor-preview h6+p {
+    margin-top: 0;
+}
+
+div.editor-preview li p.first {
+    display: inline-block;
+}
+
+div.editor-preview ul li {
+    list-style: disc;
+}
+
+div.editor-preview ul,
+div.editor-preview ol {
+    padding-left: 30px;
+}
+
+div.editor-preview ul.no-list,
+div.editor-preview ol.no-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+div.editor-preview ul li>:first-child,
+div.editor-preview ul li ul:first-of-type,
+div.editor-preview ol li>:first-child,
+div.editor-preview ol li ul:first-of-type {
+    margin-top: 0px;
+}
+
+div.editor-preview ul ul,
+div.editor-preview ul ol,
+div.editor-preview ol ol,
+div.editor-preview ol ul {
+    margin-bottom: 0;
+}
+
+div.editor-preview dl {
+    padding: 0;
+}
+
+div.editor-preview dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px;
+}
+
+div.editor-preview dl dt:first-child {
+    padding: 0;
+}
+
+div.editor-preview dl dt>:first-child {
+    margin-top: 0px;
+}
+
+div.editor-preview dl dt>:last-child {
+    margin-bottom: 0px;
+}
+
+div.editor-preview dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px;
+}
+
+div.editor-preview dl dd>:first-child {
+    margin-top: 0px;
+}
+
+div.editor-preview dl dd>:last-child {
+    margin-bottom: 0px;
+}
+
+div.editor-preview blockquote {
+    border-left: 4px solid #DDD;
+    padding: 5px 15px;
+    color: #777;
+    background-color: #fff;
+}
+
+div.editor-preview blockquote>:first-child {
+    margin-top: 0px;
+}
+
+div.editor-preview blockquote>:last-child {
+    margin-bottom: 0px;
+}
+
+div.editor-preview table th {
+    font-weight: bold;
+}
+
+div.editor-preview table th,
+div.editor-preview table td {
+    border: 1px solid #ccc;
+    padding: 6px 13px;
+}
+
+div.editor-preview table tr {
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+
+div.editor-preview table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+div.editor-preview img,
+div.editor-preview p img {
+    max-width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+div.editor-preview span.frame {
+    display: block;
+    overflow: hidden;
+}
+
+div.editor-preview span.frame>span {
+    border: 1px solid #ddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto;
+}
+
+div.editor-preview span.frame span img {
+    display: block;
+    float: left;
+}
+
+div.editor-preview span.frame span span {
+    clear: both;
+    color: #333;
+    display: block;
+    padding: 5px 0 0;
+}
+
+div.editor-preview span.align-center {
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+
+div.editor-preview span.align-center>span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center;
+}
+
+div.editor-preview span.align-center span img {
+    margin: 0 auto;
+    text-align: center;
+}
+
+div.editor-preview span.align-right {
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+
+div.editor-preview span.align-right>span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right;
+}
+
+div.editor-preview span.align-right span img {
+    margin: 0;
+    text-align: right;
+}
+
+div.editor-preview span.float-left {
+    display: block;
+    margin-right: 13px;
+    overflow: hidden;
+    float: left;
+}
+
+div.editor-preview span.float-left span {
+    margin: 13px 0 0;
+}
+
+div.editor-preview span.float-right {
+    display: block;
+    margin-left: 13px;
+    overflow: hidden;
+    float: right;
+}
+
+div.editor-preview span.float-right>span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right;
+}
+
+div.editor-preview code,
+div.editor-preview tt {
+    margin: 0 2px;
+    padding: 0px 5px;
+    border: 1px solid #eaeaea;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+}
+
+div.editor-preview code {
+    white-space: nowrap;
+}
+
+div.editor-preview pre>code {
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    border: none;
+    background: transparent;
+}
+
+div.editor-preview .highlight pre,
+div.editor-preview pre {
+    border: 1px solid #f0f0f0;
+    padding: 10px;
+    overflow: auto;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+}
+
+div.editor-preview pre code,
+div.editor-preview pre tt {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+div.editor-preview {
+    overflow: auto;
+}

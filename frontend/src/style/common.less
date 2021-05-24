@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F1F1F1;
+    color: #333;
+
+    .ant-divider-horizontal {
+        margin: 14px 0;
+    }
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-interval {
+    margin-top: 14px;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+.content-wrapper {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.fixed-box {
+    display: flex;
+    position: relative;
+}
+
+.blog-problem-header {
+    position: relative;
+    height: 160px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    border-bottom: none;
+    padding-top: 15px;
+
+    &+.content-wrapper {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .title {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 36px;
+    }
+    .btn {
+        position: absolute;
+        right: 20px;
+    }
+}
